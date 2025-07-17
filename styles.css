@@ -1,0 +1,99 @@
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top if content grows */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-area {
+    display: flex; /* Using flexbox for input and button alignment */
+    margin-bottom: 20px;
+}
+
+#todoInput {
+    flex-grow: 1; /* Input takes available space */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px; /* Rounded left corners */
+}
+
+#addButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; /* Rounded right corners */
+    white-space: nowrap;
+}
+#addButton:hover {
+    background-color: #218838;
+}
+
+#todoList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todoList li {
+    background-color: #fff;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between; /* Pushes text and delete button apart */
+    align-items: center;
+    text-align: left;
+    word-break: break-word; /* To wrap long task names */
+}
+
+#todoList li:last-child {
+    border-bottom: none;
+}
+
+#todoList li.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #f9f9f9;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+#feedbackMessage {
+    margin-top: 15px;
+    color: green;
+    font-style: italic;
+}
